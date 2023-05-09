@@ -8,16 +8,12 @@ const UserSchema = new mongoose.Schema({
     GSTNO : {
         type : String,
         required : false
-
     },
     RegNo : {
         type : String,
         required : false
     },
-    PAN : {
-        type : String,
-        required : false
-    },
+    
     Zone : {
         type : String,
         required : false
@@ -58,10 +54,10 @@ const UserSchema = new mongoose.Schema({
         type : String,
         required : false
     },
-    GstCertificate : {
-        type : String,
-        required : false
-    },
+    // GstCertificate : {
+    //     type : String,
+    //     required : false
+    // },
     Gumasta : {
         type : String,
         required : false
@@ -78,14 +74,14 @@ const UserSchema = new mongoose.Schema({
         type : String,
         required : false
     },
-    InsuranceCertificate : {
-        type : String,
-        required : false
-    },
-    AdditionalCertificate : {
-        type : String,
-        required : false
-    },
+    // InsuranceCertificate : {
+    //     type : String,
+    //     required : false
+    // },
+    // AdditionalCertificate : {
+    //     type : String,
+    //     required : false
+    // },
     BankDetails : {
         type : String,
         required : false
