@@ -5,9 +5,9 @@ export const addMR = async (req  , res) =>{
     try{
         const {SellingPermit , CompanyRegistrationNo , OfferLetter , MRIdentityProof 
         , PersonalID , AdressProof , ContactNo , ExperienceDetails , EducationalBackground , TeamSize , RelevantLicences ,AdditionalCertificates } = req.body;
-       if (!CompanyRegistrationNo || !OfferLetter || MRIdentityProof || SellingPermit){
-        return res.sendStatus(400)
-       }
+    //    if (!CompanyRegistrationNo || !OfferLetter || MRIdentityProof || SellingPermit){
+    //     return res.sendStatus(400)
+    //    }
        const existingUser = await getMRByName(CompanyRegistrationNo);
        if(existingUser){
         return res.sendStatus(400);
@@ -18,10 +18,10 @@ export const addMR = async (req  , res) =>{
         , PersonalID , AdressProof , ContactNo , ExperienceDetails , EducationalBackground , TeamSize , RelevantLicences ,AdditionalCertificates
        })
 
-       return res.sendStatus(200).json(user); 
+       return res.send(200).json(user); 
     }catch(err){
         console.log(err);
-        return res.sendStatus(400)
+        return res.send(400).json({'err':err})
     }
 }
 
