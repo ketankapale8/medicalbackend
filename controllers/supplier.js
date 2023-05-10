@@ -13,7 +13,6 @@ export const addSupplier = async (req  , res ) =>{
        if(existingUser){
         return res.sendStatus(400);
        }
-
        const user = await createSupplier({
         SupplierName ,
         GSTNO,
